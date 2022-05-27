@@ -92,6 +92,7 @@ body {
   display: inline;
   float: right;
   font-size: 18px;
+  margin-right: 2.5rem;
 }
   
 .nav > .nav-links > a {
@@ -102,7 +103,8 @@ body {
 }
   
 .nav > .nav-links > a:hover {
-  background-color: rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+  background-color: rgb(0, 98, 129, 0.1);
 }
   
 .nav > #nav-check {
@@ -111,10 +113,19 @@ body {
 
 .nav-logo {
   width: 3em;
-  margin-left: 0.5em;
+  margin-left: 1.5em;
+}
+
+.pageactive {
+  font-weight: 700;
 }
   
 @media (max-width:700px) {
+  .nav > .nav-links > a {
+    color: white;
+    text-transform: uppercase;
+  }
+
   .nav > .nav-btn {
     display: inline-block;
   }
@@ -137,7 +148,7 @@ body {
     position: absolute;
     display: block;
     width: 100%;
-    background-color: #006281;
+    background-color: rgb(0, 98, 129);
     height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
@@ -157,6 +168,10 @@ body {
   .nav > #nav-check:checked ~ .nav-links {
     height: calc(20rem - 100px);
     overflow-y: auto;
+  }
+
+  .home-header-title-cont, .header-title-1, .header-title-2 {
+    margin: 0;
   }
 }
 
@@ -194,6 +209,7 @@ html {
 .text-footer{
   color: #006281;
   opacity: 0.6;
+  font-family: raleway, sans-serif, light;
 }
 
 /* Home mobile */
@@ -209,9 +225,13 @@ html {
   align-items: center;
 }
 
-.animlogo{
+.animlogo {
   width: 80%;
   margin-top: 1.5rem;
+}
+
+.balls {
+  width: 60%;
 }
 
 .interback {
@@ -233,12 +253,14 @@ html {
 
 .home-header-title-cont{
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .header-title-1{
-  margin: 3rem 20% 0 14%;
+  margin: 3rem 0 0 1rem;
   font-size: 4rem;
   letter-spacing: 1rem;
   font-family: raleway, sans-serif, medium;
@@ -246,7 +268,7 @@ html {
 }
 
 .header-title-2{
-  margin: 0.5rem 10% 0 13%;
+  margin: 0 10% 0 13%;
   font-size: 3rem;
   letter-spacing: 0.5rem;
   font-family: raleway, sans-serif, medium;
@@ -321,6 +343,14 @@ html {
   display: block;
 }
 
+.text-cont-desktop {
+  display: none;
+}
+
+.desk-container {
+  display: none;
+}
+
 /* vi tilbyder page mobile*/
 
 .title-pages{
@@ -348,11 +378,57 @@ html {
   color: #5E5D5D;
 }
 
+.total-box{
+  display: none;
+}
+
+.total-box-cont {
+  display: none;
+}
+
 .vtmain {
   margin-bottom: 2rem;
 }
 
+.shooting-star-cont{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.shooting-star{
+  width: 60%;
+}
+
+.vt-desktopdiv {
+  display: none;
+}
+
+.vt-text-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+#Btn-mobile{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: raleway, sans-serif, light;
+  background-color: #006281;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  Padding: 1rem;
+}
+
 /* Vores kunder siger page mobile */
+
+.vks-desktop {
+  display: none;
+}
 
 .virksomhed-title{
   margin-left: 2.5rem;
@@ -409,6 +485,14 @@ html {
   margin-top: 2rem;
 }
 
+#aarhus-hospital{
+  margin-bottom: 3rem;
+}
+
+.vks-desktop-bottom {
+  display: none;
+}
+
 /* Om dimenzions page mobile */
 
 #om-title-page{
@@ -430,11 +514,11 @@ html {
 }
 
 .om-vidcont {
-  background-image: url("../img/omdmobile.svg");
   height: 37rem;
   width: 100%;
   background-repeat: no-repeat;
   position: relative;
+  background-image: url("../img/omdmobile.svg");
 }
 
 .videoholder {
@@ -442,11 +526,17 @@ html {
   top: 8rem;
 }
 
-.video {
+.om-background{
   width: 100%;
+  display: block;
 }
 
-.omdesktop {
+.video {
+  width: 100%;
+  height: 15rem;
+}
+
+.om-vidcont2 {
   display: none;
 }
 
@@ -457,6 +547,11 @@ html {
   justify-content: center;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+#gmap_canvas{
+  width: 300px;
+  height: 250px;
 }
 
 .contact-links-cont{
@@ -494,6 +589,7 @@ html {
   background-color: rgb(0, 98, 129, 0.1);
   height: 1.5rem;
   outline: none;
+  font-family: europa, sans-serif, light;
 }
 
 .form-label{
@@ -515,35 +611,37 @@ html {
 }
 
 .sendbutton{
+  cursor: pointer;
   color: #006281;
   font-family: europa, sans-serif, light;
   font-weight: lighter;
   background-color: rgb(0, 98, 129, 0.2);
-  border-color: #006281;
+  border-color: rgb(0, 98, 129, 0.3);
+}
+
+.sendbutton:hover {
+  transition: 0.5s;
+  background-color: rgb(0, 98, 129, 0.4);
 }
 
 /* Desktop versions */
 
-@media screen and (min-width: 700px) {
-
-  /* Pages title */
-
-  .pages-title-cont{
-    display: flex;
-    justify-content: center;
-    margin-top: 3rem;
-  }
-
-  .title-pages{
-    font-size: 5rem;
-  }
-
+@media screen and (min-width: 1000px) {
+  
   /* Home desktop */
 
-  .greyline, .whiteline, .numberwords, .home-header-title-cont {
+  .greyline, .whiteline, .numberwords, .home-header-title-cont, .oneword, .animlogo {
     display: none;
   }
   
+  .desk-container {
+    display: block;
+  }
+
+  .text-cont-desktop {
+    display: block;
+  }
+
   .interback{
     height: 15rem;
   }
@@ -560,6 +658,7 @@ html {
   .contdiv-fivewords {
     width: 100%;
     position: relative;
+    height: 80rem;
   }
 
   .svgback {
@@ -628,10 +727,635 @@ html {
     font-size: 4vw;
   }
 
+  .desk-desc-holder {
+    position: relative;
+    text-align: center;
+  }
+
+  /* background image for the desktop */
+  .svgback {
+    object-fit: cover;
+    width: 100%;
+    height: 100vw;
+  }
+
+  /* common styling for description card */
+  .desk-desc {
+    width: 10vw;
+    height: 20vw;
+    background-color: rgb(152, 146, 146, 0.6);
+    position: absolute;
+
+    font-size: 0.9vw;
+    padding-top: 1em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1rem;
+    padding: 0 1rem;
+  }
+
+  /* common styling for the card titles */
+  .desk-title {
+    width: 10vw;
+    height: 20vw;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+
+    font-size: 2vw;
+    writing-mode: vertical-lr;
+    text-align: end;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-bottom: 0.5em;
+    color: #006281;
+    font-family: raleway, sans-serif, light;
+    font-weight: lighter;
+    z-index: 99;
+  }
+
+  .card-cont {
+    cursor: pointer;
+  }
+
+  .card-cont:hover .desk-desc {
+    transition: 0.7s;
+    transform: translateY(20vw);
+  }
+
+  /* classed added to cards to position it */
+  .dt1 {
+    top: 16.6%;
+    right: 48.5%;
+  }
+
+  .dt2{
+    top: 16.6%;
+    right: 37.6%;
+  }
+
+  .dt3{
+    top: 16.6%;
+    right: 26.6%;
+  }
+
+  .dt4{
+    top: 16.6%;
+    right: 15.7%;
+  }
+
+  .dt5{
+    top: 16.6%;
+    right: 4.5%;
+  }
+
+  .dd1 {
+    top: 16.6%;
+    right: 48.5%;
+    font-family: europa, sans-serif, light;
+    font-weight: lighter;
+  }
+
+  .dd2{
+    top: 16.6%;
+    right: 37.6%;
+    font-family: europa, sans-serif, light;
+    font-weight: lighter;
+  }
+
+  .dd3{
+    top: 16.6%;
+    right: 26.6%;
+    font-family: europa, sans-serif, light;
+    font-weight: lighter;
+  }
+
+  .dd4{
+    top: 16.6%;
+    right: 15.7%;
+    font-family: europa, sans-serif, light;
+    font-weight: lighter;
+  }
+
+  .dd5{
+    top: 16.6%;
+    right: 4.5%;
+    font-family: europa, sans-serif, light;
+    font-weight: lighter;
+  }
+
+  /* Numbers */
+
+  .numdiv {
+    width: 3vw;
+    height: 3vw;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+  }
+
+  .nd1 {
+    background-image: url("../img/one.png");
+    background-size: cover;
+    top: 24%;
+    left: 41%;
+  }
+  
+  .nd2 {
+    background-image: url("../img/two.png");
+    background-size: cover;
+    top: 24%;
+    left: 52%;
+  }
+
+  .nd3 {
+    background-image: url("../img/three.png");
+    background-size: cover;
+    top: 24%;
+    left: 62.7%;
+  }
+
+  .nd4 {
+    background-image: url("../img/four.png");
+    background-size: cover;
+    top: 24%;
+    left: 73.7%;
+  }
+
+  .nd5 {
+    background-image: url("../img/five.png");
+    background-size: cover;
+    top: 24%;
+    left: 84.5%;
+  }
+
+}
+
+@media screen and (min-width: 700px) {
+
+  /* Pages title */
+
+  .pages-title-cont{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+
+  .title-pages{
+    font-size: 5rem;
+  }
+
+  /* Vi tilbyder desktop */
+
+  .onepart {
+    display: none;
+  }
+
+  .vt-desktopdiv {
+    display: block;
+  }
+
+  .total-box-cont{
+    width: 100%;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+  }
+
+  .total-box{
+    width: 65%;
+    display: flex;
+    position: relative;
+  }
+
+  .design-profil-cont{
+    display: flex;
+    position: absolute;
+    clip-path: polygon(0% 15%, 0% 2%, 15% 2%, 80% 2%, 80% 45%, 100% 45%, 100% 100%, 85% 100%, 15% 100%, 0 100%, 0% 85%);
+    background-image: url("../img/lightdesign.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 23.8em;
+    height: 15rem;
+  }
+
+  .design-profil{
+    font-size: 2rem;
+    margin-top: 9rem;
+    margin-left: 5rem;
+    color: #006281;
+    font-family: europa, sans-serif, bold;
+  }
+
+  .brochure-cont{
+    display: flex;
+    position: absolute;
+    width: 30.3em;
+    height: 6em;
+    background-image: url("../img/lightbrochurer.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    left: 20em;  
+  }
+
+  .brochure{
+    font-size: 1.7rem;
+    margin-top: 2rem;
+    margin-left: 5rem;
+    color: #006281;
+    font-family: europa, sans-serif, bold;
+  }
+
+  .dromme-box-cont {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    background-image: url("../img/lightdreambox.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 13.5em;
+    height: 13.5em;
+    top: 6.8em;
+    left: 24.8em;
+  }
+
+  .dromme-box{
+    font-size: 3rem;
+    margin-top: 0.5em;
+    line-height: 5rem;
+    color: white;
+    font-family: europa, sans-serif, light;
+    font-weight: lighter;
+  }
+
+  .etiket-cont{
+    display: flex;
+    position: absolute;
+    clip-path: polygon(0 45%, 50% 45%, 50% 0, 100% 0, 100% 100%, 0 100%);
+    background-image: url("../img/lightetiket.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 23.8em;
+    height: 15rem;
+    left: 39.2em;
+  }
+
+  .etiket{
+    font-size: 2rem;
+    margin-top: 9rem;
+    margin-left: 7rem;
+    color: #006281;
+    font-family: europa, sans-serif, bold;
+  }
+
+  .salg-cont{
+    display: flex;
+    position: absolute;
+    clip-path: polygon(0% 0%, 0 0, 15% 0%, 83.5% 0, 83.5% 21%, 100% 21%, 100% 50%, 0 50%);
+    background-image: url("../img/lightsalg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 28.5em;
+    height: 25rem;
+    top: 16em;
+  }
+
+  .salg{
+    font-size: 2rem;
+    margin-top: 4.5rem;
+    margin-left: 5rem;
+    color: #006281;
+    font-family: europa, sans-serif, bold;
+  }
+
+  .events-cont{
+    display: flex;
+    position: absolute;
+    text-align: right;
+    clip-path: polygon(2% 19.5%, 30% 19.5%, 30% 0, 100% 0, 100% 46%, 2% 46%);
+    background-image: url("../img/lightevents.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 27rem;
+    width: 34em;
+    top: 16em;
+    left: 29em;
+  }
+
+  .events{
+    font-size: 2rem;
+    margin-top: 4.5rem;
+    margin-left: 19rem;
+    color: #006281;
+    font-family: europa, sans-serif, bold;
+  }
+
+  #vilfoot {
+    display: none;
+  }
+
+  .vt-desktopdiv {
+    margin-top: 37em;
+  }
+
+  .vt-greyline {
+    width: 30rem;
+    height: 1px;
+    background-color: #5E5D5D;
+  }
+  
+  .vt-desk-content {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .vt-desk-text {
+    width: 30rem;
+    font-family: europa, sans-serif, bold;
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: #5E5D5D;
+
+  }
+
+  .onepart-desk {
+    width: 100%;
+    padding-bottom: 10rem;
+  }
+
+  .vtone {
+    margin-left: 7rem;
+  }
+
+  .vtsec {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-right: 7rem;
+  }
+
+  .vt-desk-head {
+    font-family: raleway, sans-serif, medium;
+    color: #989292;
+    text-transform: uppercase;
+    font-size: 3.5em;
+    margin: 0.5em 0;
+  }
+
+  #Btn {
+    clip-path: polygon(0% 15%, 0 0, 15% 0%, 80% 0, 80% 45%, 100% 45%, 100% 100%, 85% 100%, 15% 100%, 0 100%, 0% 85%);
+    background-image: url("../img/lightdesign.png");
+    border: none;
+    width: 7rem;
+    height: 5rem;
+    text-align: left;
+    color: #006281;
+    font-family: europa, sans-serif, bold;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  #BtnB{
+    clip-path: polygon(0% 0%, 0 0, 15% 0%, 83.5% 0, 83.5% 21%, 100% 21%, 100% 50%, 0 50%);
+    background-image: url("../img/lightsalg.png");
+    border: none;
+    width: 7rem;
+    height: 8rem;
+    display: flex;
+    text-align: left;
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    color: #006281;
+    font-family: europa, sans-serif, bold;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  #BtnC{
+    width: 6em;
+    height: 4em;
+    background-image: url("../img/lightbrochurer.png");
+    border: none;
+    padding-top: 0.5rem;
+    text-align: left;
+    color: #006281;
+    font-family: europa, sans-serif, bold;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  #BtnD{
+    clip-path: polygon(0 45%, 50% 45%, 50% 0, 100% 0, 100% 100%, 0 100%);
+    background-image: url("../img/lightetiket.png");
+    border: none;
+    width: 7rem;
+    height: 5rem;
+    padding-right: 1rem;
+    text-align: right;
+    color: #006281;
+    font-family: europa, sans-serif, bold;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  #BtnE{
+    clip-path: polygon(2% 19.5%, 30% 19.5%, 30% 0, 100% 0, 100% 46%, 2% 46%);
+    background-image: url("../img/lightevents.png");
+    border: none;
+    width: 7rem;
+    height: 8rem;
+    display: flex;
+    text-align: right;
+    padding-left: 1.5rem;
+    color: #006281;
+    font-family: europa, sans-serif, bold;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  #BtnF{
+    background-image: url("../img/lightdreambox.png ");
+    background-size: cover;
+    border: none;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-family: europa, sans-serif, bold;
+    font-weight: bold;
+    font-size: 1rem;
+    padding-left: 0.2rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+  }
+
+  #Btn:hover, #BtnA:hover, #BtnB:hover, #BtnC:hover, #BtnD:hover, #BtnE:hover, #BtnF:hover {
+    cursor: pointer;
+  }
+
+  .vt-star {
+    margin: 2rem;
+    width: 10em;
+  }
+
+  /* Vores kunder siger desktop*/
+
+  a {
+    text-decoration: none;
+  }
+
+  .virksomhed {
+    display: none;
+  }
+
+  .vks-clickables {
+    display: flex;
+    flex-direction: column;
+    font-family: raleway, sans-serif, medium;
+    font-size: 1.2vw;
+    margin-left: 5em;
+  }
+
+  .vks-click {
+    color: #006281;
+    margin-bottom: 2rem;
+  }
+
+  .vks-active {
+    font-weight: 700;
+  }
+
+  .vks-desktop {
+    margin: 5em 0;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "leftvks rightvks";
+  }
+  
+  .leftside-nav-vks {
+    grid-area: leftvks;
+  }
+  
+  .rightside-vks {
+    grid-area: rightvks;
+  }
+
+  .vks-out-heading {
+    font-family: raleway, sans-serif, medium;
+    color: #006281;
+    font-size: 4em;
+  }
+  
+  .vks-out-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-right: 10vw;
+    height: 30rem;
+  }
+  
+  .vks-out-cont-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 2em;
+  }
+
+  .vks-out-p {
+    color: #006281;
+    font-family: europa, sans-serif;
+    width: 23em;
+    font-weight: 100;
+    font-size: 1.1em;
+  }
+
+  .vks-text-littleimage {
+    margin-top: 3em;
+    width: 12em;
+  }
+
+  .littlecont {
+    display: flex;
+    justify-content: end;
+  }
+
+  .vks-image {
+    width: 22em;
+  }
+
+  .vks-out-cont-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .vks-desktop-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-bottom: 5rem;
+  }
+
+  .vks-btm-limg {
+    width: 50em;
+    display: block;
+  }
+
+  .vks-btm-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .vks-btm-right-content {
+    background-image: url("../img/lightbrochurer.png");
+    background-size: cover;
+    width: 40em;
+    height: 18em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .vks-btm-text-cont {
+    text-align: center;
+    margin-bottom: 2em;
+    color: #006281;
+    font-family: europa, sans-serif;
+  }
+
+  .vks-btm-text {
+    font-size: 1.5em;
+  }
+
+  .vks-button {
+    color: #006281;
+    background-color: rgb(0, 98, 129, 0.2);
+    border: none;
+    padding: 0.5em 1em;
+  }
+
+  .vks-button:hover {
+    transition: 0.5s;
+    background-color: rgb(0, 98, 129, 0.4);
+  }
   /* Om dimenzions desktop */
 
   #om-title-page{
     font-size: 6rem;
+    z-index: 999;
   }
 
   .omdesktop{
@@ -640,17 +1364,73 @@ html {
     position: relative;
   }
   
-  .om-vidcont {
-    background-image: url("../img/omddesktop.svg");
-    height: 150em;
-    width: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: relative;
+  .om-vidcont{
+    display: none;
   }
 
-  .video{
-    width: 30%;
+  .om-vidcont2{
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-top: -4rem;
+  }
+
+  .video2{
+    position: absolute;
+    width: 65%;
+    height: 40rem;
+    top: 25em;
+    right: 2em;
+  }
+
+  .om-background-desktop{
+    display: block;
+    width: 100%;
+  }
+
+  .om-text{
+    position: absolute;
+    top: 67em;
+    right: 14.5em;
+    z-index: 999;
+    color: #006281;
+    font-size: 1.5vw;
+    width: 25%;
+  }
+
+  /* Kontakt desktop */
+
+  .desktop-grid{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 4rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .desktop-leftside{
+    width: 50%;
+  }
+
+  .desktop-rightside{
+    width: 50%;
+    margin-bottom: 3rem;
+  }
+
+  .form-input{
+    width: 50%;
+    height: 2rem;
+  }
+
+  #gmap_canvas{
+    width: 150%
+  }
+
+  .mapouter{
+    justify-content: left;
+    margin-left: 4rem;
+    margin-top: 2.55rem;
   }
 
 }

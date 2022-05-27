@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dimenzions | Vores kunder siger</title>
+    <meta name="description" content="Dimenzions reklamer bureau - Vores kunder siger">
+    <meta name="keywords" content="Reklamebureau, Grafisk design, Branding">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/jfb3obb.css">
 </head>
@@ -17,7 +19,7 @@
         <div class="nav-header">
         <div class="nav-title">
             <a href="index.html">
-            <img src="img/navlogo.png" class="nav-logo">
+            <img src="img/navlogo.png" class="nav-logo" alt="NavBar Logo">
             </a>
         </div>
         </div>
@@ -31,7 +33,7 @@
         <div class="nav-links">
             <a href="index.html">Hjem</a>
             <a href="vitilbyder.html">Vi tilbyder</a>
-            <a href="vidnesbyrd.html">Vores kunder siger</a>
+            <a href="vidnesbyrd.html" class="pageactive">Vores kunder siger</a>
             <a href="omdimenzions.html">Om Dimenzions</a>
             <a href="kontakt.html">Kontakt</a>
         </div>
@@ -43,19 +45,19 @@
         <!-- first company -->
         <div class="virksomhed">
             <div class="virksomhed-title-cont">
-                <h2 class="virksomhed-title">Aarhus Universitethospital</h2>
+                <h2 class="virksomhed-title">Naturdrogeriet</h2>
             </div>
             <div class="virksomhed-photo-cont">
-                <img src="img/SkejbySygehusPhoto.jpg" class="virksomhed-photo" alt="Company's name">
+                <img src="img/NaturdrogerietPhoto.jpg" class="virksomhed-photo" alt="Company's name">
             </div>
             <div class="virksomhed-text-cont">
                 <p class="virksomhed-text">
-                    "Helle er en super samarbejdspartner… Hun sætter ikke kun tingene pænt og overskueligt op men sætter sig faktisk ind i stoffet og på den måde udfordrer os på vores fag, hvilket giver et rigtig godt slutresultat. Hun får vores absolut bedste anbefalinger." <br><br>
-                    - Dorthe
+                    "Helle er utrolig nem at arbejde sammen med. Humøret er altid højt, hendes tilgang til alt er positivt og konstruktivt. Hun har løftet vores designlinje til nye højder og dermed bidraget til at vores målgruppe er blevet væsentligt større. Og hun er utrættelig hvad angår forslag til forbedringer til både produkter og design." <br><br>
+                    - Helle
                 </p>
             </div>
             <div class="virksomhed-logo-cont">
-                <img src="img/SkejbySygehusLogo.png" class="virksomhed-logo" alt="Aarhus Universitethospital logo">
+                <img src="img/NaturdrogerietLogo.png" class="virksomhed-logo" id="last-logo" alt="Natur Drogertiet">
             </div>
         </div>
         <!-- Second company -->
@@ -94,30 +96,79 @@
                 <img src="img/RETHINKlogo.png" class="virksomhed-logo" id="rethink-consulting" alt="Rethink consulting">
             </div>
         </div>
-        <!-- Fourth company -->
+    <!-- Fourth company -->
         <div class="virksomhed">
             <div class="virksomhed-title-cont">
-                <h2 class="virksomhed-title">Natur drogeriet</h2>
+                <h2 class="virksomhed-title">Aarhus Universitethospital</h2>
             </div>
             <div class="virksomhed-photo-cont">
-                <img src="img/NaturdrogerietPhoto.jpg" class="virksomhed-photo" alt="Company's name">
+                <img src="img/SkejbySygehusPhoto.jpg" class="virksomhed-photo" alt="Company's name">
             </div>
             <div class="virksomhed-text-cont">
                 <p class="virksomhed-text">
-                    "Helle er utrolig nem at arbejde sammen med. Humøret er altid højt, hendes tilgang til alt er positivt og konstruktivt. Hun har løftet vores designlinje til nye højder og dermed bidraget til at vores målgruppe er blevet væsentligt større. Og hun er utrættelig hvad angår forslag til forbedringer til både produkter og design." <br><br>
-                    - Helle
+                    "Helle er en super samarbejdspartner… Hun sætter ikke kun tingene pænt og overskueligt op men sætter sig faktisk ind i stoffet og på den måde udfordrer os på vores fag, hvilket giver et rigtig godt slutresultat. Hun får vores absolut bedste anbefalinger." <br><br>
+                    - Dorthe
                 </p>
             </div>
             <div class="virksomhed-logo-cont">
-                <img src="img/NaturdrogerietLogo.png" class="virksomhed-logo" id="last-logo" alt="Natur Drogertiet">
+                <img src="img/SkejbySygehusLogo.png" class="virksomhed-logo" id="aarhus-hospital" alt="Aarhus Universitethospital logo">
             </div>
-        </div>      
+        </div>
+    <!-- Desktop version -->
+        <div class="vks-desktop">
+            <div class="leftside-nav-vks">
+                <div class="vks-clickables">
+                    <a href="#" id="vks-one" class="vks-click vks-active" onclick="showOutputOne()">Naturdrogeriet</a>
+                    <a href="#" id="vks-two" class="vks-click" onclick="showOutputTwo()">Harder Herretøj</a>
+                    <a href="#" id="vks-three" class="vks-click" onclick="showOutputThree()">Rethink Consulting</a>
+                    <a href="#" id="vks-four" class="vks-click" onclick="showOutputFour()">Aarhus Universitethospital</a>
+                </div>
+            </div>
+            <div class="rightside-vks">
+                <div class="vks-output" id="vks-output">
+                    <div class="vks-out-head-cont">
+                        <h2 class="vks-out-heading">Naturdrogeriet</h2>
+                    </div>
+                    <div class="vks-out-content">
+                        <div class="vks-out-cont-text">
+                            <p class="vks-out-p">"Helle er utrolig nem at arbejde sammen med. Humøret er altid højt, hendes tilgang til alt er positivt og konstruktivt. Hun har løftet vores designlinje til nye højder og dermed bidraget til at vores målgruppe er blevet væsentligt større. Og hun er utrættelig hvad angår forslag til forbedringer til både produkter og design." <br><br>
+                                - Helle</p>
+                            <div class="littlecont">
+                                <img src="img/NaturdrogerietLogo.png" class="vks-text-littleimage" alt="Naturdrogeriet Logo">
+                            </div>
+                        </div>
+                        <div class="vks-out-cont-image">
+                            <img src="img/NaturdrogerietPhoto.jpg" class="vks-image" alt="Naturdrogeriet Product">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vks-desktop-bottom">
+            <div class="vks-btm-left">
+                <img src="img/hellemain.jpeg" class="vks-btm-limg" alt="People Working">
+            </div>
+            <div class="vks-btm-right">
+                <div class="vks-btm-right-content">
+                    <div class="vks-btm-text-cont">
+                        <p class="vks-btm-text">Har du arbejdet med Dimenzions før?<br>Fortæl os om din oplevelse!</p>
+                    </div>
+                    <div class="vks-btm-button-cont1">
+                        <div class="vks-button-cont2">
+                            <a href="kontakt.html" class="vks-button">Kontakt os!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="text-footer-cont">
+          <p class="text-footer">
+            © Copyright by Dimenzions. All rights reserved.
+          </p>
+        </div>
+    </footer>
+<script src="js/testimonials.js"></script>
 </body>
-<footer class="footer">
-    <div class="text-footer-cont">
-      <p class="text-footer">
-        © Copyright by Dimenzions. All rights reserved.
-      </p>
-    </div>
-</footer>
 </html>

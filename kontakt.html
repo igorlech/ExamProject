@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dimenzions | Kontakt</title>
+    <meta name="description" content="Dimenzions reklamer bureau - Kontakt">
+    <meta name="keywords" content="Reklamebureau, Grafisk design, Aarhus, Lokal">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/jfb3obb.css">
 </head>
@@ -17,7 +19,7 @@
         <div class="nav-header">
           <div class="nav-title">
             <a href="index.html">
-              <img src="img/navlogo.png" class="nav-logo">
+              <img src="img/navlogo.png" class="nav-logo" alt="NavBar Logo">
             </a>
           </div>
         </div>
@@ -33,64 +35,66 @@
           <a href="vitilbyder.html">Vi tilbyder</a>
           <a href="vidnesbyrd.html">Vores kunder siger</a>
           <a href="omdimenzions.html">Om Dimenzions</a>
-          <a href="kontakt.html">Kontakt</a>
+          <a href="kontakt.html" class="pageactive">Kontakt</a>
         </div>
     </header>
     <main class="kontaktmain">
       <div class="pages-title-cont">
           <h1 class="title-pages">KONTAKT</h1>
       </div>
-      <div class="desktop-rightside">
-        <div class="contact-links-cont">
-          <a href="tel:+45 60127879" class="content-contact">+45 60127879</a> <br>
-          <a href="mailto: helle@dimenzions.dk" class="content-contact">helle@dimenzions.dk</a> <br>
-          <p class="content-contact">Rosensgade 36, Århus C</p>
-        </div>
-        <div class="mapouter">
-          <div class="gmap_canvas">
-            <iframe width="300" height="250" id="gmap_canvas" src="https://maps.google.com/maps?q=rosensgade%2036&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+      <div class="desktop-grid">
+        <div class="desktop-rightside">
+          <div class="contact-links-cont">
+            <a href="tel:+4560127879" class="content-contact">+45 60127879</a> <br>
+            <a href="mailto:helle@dimenzions.dk" class="content-contact">helle@dimenzions.dk</a> <br>
+            <p class="content-contact">Rosensgade 36, Århus C</p>
+          </div>
+          <div class="mapouter">
+            <div class="gmap_canvas">
+              <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=rosensgade%2036,%20aarhus&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="desktop-leftside">
-        <form class="form">
-          <fieldset>
-            <div class="legend-cont">
-              <legend class="legend">Kontakt os!</legend>
-            </div>
-            <div class="formelements-cont">
-              <div class="formelements-single">
-                <label for="name" class="form-label">Dit navn</label>
-                <br>
-                <input type="text" class="form-input">
+        <div class="desktop-leftside">
+          <form class="form">
+            <fieldset>
+              <div class="legend-cont">
+                <h1 class="legend">Kontakt os!</h1>
               </div>
-            </div>
-            <div class="formelements-cont">
-              <div class="formelements-single">
-                <label for="name" class="form-label">Dit telefonummer</label>
-                <br>
-                <input type="text" class="form-input">
+              <div class="formelements-cont">
+                <div class="formelements-single">
+                  <label for="name" class="form-label">Dit navn</label>
+                  <br>
+                  <input type="text" class="form-input" id="name">
+                </div>
               </div>
-            </div>
-            <div class="formelements-cont">
-              <div class="formelements-single">
-                <label for="name" class="form-label">Din e-mail</label>
-                <br>
-                <input type="text" class="form-input">
+              <div class="formelements-cont">
+                <div class="formelements-single">
+                  <label for="phonenum" class="form-label">Dit telefonummer</label>
+                  <br>
+                  <input type="tel" class="form-input" id="phonenum">
+                </div>
               </div>
-            </div>
-            <div class="formelements-cont">
-              <div class="formelements-single">
-                <label for="name" class="form-label">Din besked</label>
-                <textarea class="form-input" id="different-input" name="din besked"></textarea>
+              <div class="formelements-cont">
+                <div class="formelements-single">
+                  <label for="email" class="form-label">Din e-mail</label>
+                  <br>
+                  <input type="text" class="form-input" id="email">
+                </div>
               </div>
-            </div>
-            <div class="button-cont">
-              <button type="submit" class="sendbutton">Indsende</button>
-            </div>
-          </fieldset>
-        </form>
-      </div>
+              <div class="formelements-cont">
+                <div class="formelements-single">
+                  <label for="name" class="form-label">Din besked</label>
+                  <textarea class="form-input" id="different-input" name="din besked"></textarea>
+                </div>
+              </div>
+              <div class="button-cont">
+                <button type="submit" class="sendbutton" onclick="alert('Vi har modtaget din besked! Vi tager kontakt til dig hurtigst muligt')">Indsende</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>  
     </main>
     <footer class="footer">
         <div class="text-footer-cont">

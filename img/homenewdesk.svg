@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1909" viewBox="0 0 1920 1909">
+  <defs>
+    <clipPath id="clip-Web_1920_1">
+      <rect width="1920" height="1909"/>
+    </clipPath>
+  </defs>
+  <g id="Web_1920_1" data-name="Web 1920 – 1" clip-path="url(#clip-Web_1920_1)">
+    <rect width="1920" height="1909" fill="#fff"/>
+    <g id="Group_1" data-name="Group 1" transform="translate(0 255)">
+      <line id="Line_2" data-name="Line 2" y2="1840.5" transform="translate(251.5 -183)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Line_3" data-name="Line 3" y2="193.5" transform="translate(1620 251.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Line_4" data-name="Line 4" y2="193.5" transform="translate(1412 251.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Line_5" data-name="Line 5" y2="193.5" transform="translate(1204 251.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Line_6" data-name="Line 6" y2="193.5" transform="translate(996 251.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Line_7" data-name="Line 7" y2="193.5" transform="translate(788 251.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Line_8" data-name="Line 8" x2="1920" transform="translate(0 445)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Line_25" data-name="Line 25" x2="1" y2="897.5" transform="translate(1848.5 268)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Line_26" data-name="Line 26" x2="732" transform="translate(0 -183)" fill="none" stroke="#707070" stroke-width="1"/>
+    </g>
+  </g>
+</svg>
